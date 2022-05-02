@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Orbs : MonoBehaviour
 {
+    public SpriteRenderer orbOne;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +15,6 @@ public class Orbs : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

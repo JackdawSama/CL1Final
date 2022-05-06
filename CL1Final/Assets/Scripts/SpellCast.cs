@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpellCast : MonoBehaviour
 {
     char[] Spell;
+    Vector3 spellCounter = new Vector3(0, 0, 0);
 
     enum Spellbook
     {
@@ -33,37 +34,58 @@ public class SpellCast : MonoBehaviour
 
     private void castSpell()
     {
-        Vector3 spellCounter = new Vector3(0, 0, 0);
-
-        if(Input.GetKeyDown(KeyCode.R))
+        for(int i = 0; i < Spell.Length; i++)
         {
-            for(int i = 0; i < Spell.Length; i++)
+            if(Spell[i] == 'Q')
             {
-                if(Spell[i] == 'Q')
-                {
-                    spellCounter.x += 1; 
-                }
-                else if(Spell[i] == 'W')
-                {
-                    spellCounter.y += 1;
-                }
-                else if(Spell[i] == 'E')
-                {
-                    spellCounter.z += 1;
-                }
+                spellCounter.x += 1; 
             }
-
-            float spellCode = 100 * spellCounter.x + 10 * spellCounter.y + spellCounter.z;
-
-            int code = (int) spellCode;
-
-            switch(code)
+            else if(Spell[i] == 'W')
             {
-                case coldSnap:
-                    //triggeranimation?
-                    break;
-                
+                spellCounter.y += 1;
             }
+            else if(Spell[i] == 'E')
+            {
+                spellCounter.z += 1;
+            }
+        }
+
+        float spellCode = 100 * spellCounter.x + 10 * spellCounter.y + spellCounter.z;
+        int code = (int) spellCode;
+
+        switch(code)
+        {
+            case 300:
+                //ColdSnap
+                break;
+            case 210:
+                //GhostWalk
+                break;
+            case 201:
+                //IceWall
+                break;
+            case 030:
+                //emp
+                break;
+            case 120:
+                //tornado
+                break;
+            case 021:
+                //alacrity
+                break;
+            case 003:
+                //SunStrike
+                break;
+            case 102:
+                //ForgeSpirit
+                break;
+            case 012:
+                //ChaosMeteor
+                break;
+            case 111:
+                //DeafeningBlast
+                break;
+            
         }
     }
 }

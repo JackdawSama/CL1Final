@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SpellCast : MonoBehaviour
 {
-    char[] Spell;
+    public List<KeyCode> Spell;
+    KeyCode inputKey;
     Vector3 spellCounter = new Vector3(0, 0, 0);
 
     enum Spellbook
@@ -29,22 +30,54 @@ public class SpellCast : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Spell.Count != 3)
+        {
+            if(Input.GetKeyDown(KeyCode.Q))
+            {
+                Spell.Add(KeyCode.Q);
+            }
+            else if(Input.GetKeyDown(KeyCode.W))
+            {
+                Spell.Add(KeyCode.W);
+            }
+            else if(Input.GetKeyDown(KeyCode.E))
+            {
+                Spell.Add(KeyCode.E);
+            }
+        }
+        else 
+        {
+            if(Input.GetKeyDown(KeyCode.Q))
+            {
+                inputKey = KeyCode.Q;
+            }
+            else if(Input.GetKeyDown(KeyCode.W))
+            {
+                inputKey = KeyCode.W;
+            }
+            else if(Input.GetKeyDown(KeyCode.E))
+            {
+                inputKey = KeyCode.E;
+            }
+        }
+
         
+
     }
 
     private void castSpell()
     {
-        for(int i = 0; i < Spell.Length; i++)
+        for(int i = 0; i < Spell.Count; i++)
         {
-            if(Spell[i] == 'Q')
+            if(Spell[i] == KeyCode.Q)
             {
                 spellCounter.x += 1; 
             }
-            else if(Spell[i] == 'W')
+            else if(Spell[i] == KeyCode.W)
             {
                 spellCounter.y += 1;
             }
-            else if(Spell[i] == 'E')
+            else if(Spell[i] == KeyCode.E)
             {
                 spellCounter.z += 1;
             }

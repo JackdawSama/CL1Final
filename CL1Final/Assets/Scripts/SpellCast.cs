@@ -30,6 +30,88 @@ public class SpellCast : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        QuasWexExort();
+    }
+
+    private void castSpell()
+    {
+        for(int i = 0; i < Spell.Count; i++)
+        {
+            if(Spell[i] == KeyCode.Q)
+            {
+                spellCounter.x += 1; 
+            }
+            else if(Spell[i] == KeyCode.W)
+            {
+                spellCounter.y += 1;
+            }
+            else if(Spell[i] == KeyCode.E)
+            {
+                spellCounter.z += 1;
+            }
+        }
+
+        float spellCode = 100 * spellCounter.x + 10 * spellCounter.y + spellCounter.z;
+        int code = (int) spellCode;
+
+        switch(code)
+        {
+            case 300:
+                //ColdSnap
+                //spell completed indicator
+                spellCounter = new Vector3(0, 0, 0);
+                break;
+            case 210:
+                //GhostWalk
+                //spell completed indicator
+                spellCounter = new Vector3(0, 0, 0);
+                break;
+            case 201:
+                //IceWall
+                //spell completed indicator
+                spellCounter = new Vector3(0, 0, 0);
+                break;
+            case 030:
+                //emp
+                //spell completed indicator
+                spellCounter = new Vector3(0, 0, 0);
+                break;
+            case 120:
+                //tornado
+                //spell completed indicator
+                spellCounter = new Vector3(0, 0, 0);
+                break;
+            case 021:
+                //alacrity
+                //spell completed indicator
+                spellCounter = new Vector3(0, 0, 0);
+                break;
+            case 003:
+                //SunStrike
+                //spell completed indicator
+                spellCounter = new Vector3(0, 0, 0);
+                break;
+            case 102:
+                //ForgeSpirit
+                //spell completed indicator
+                spellCounter = new Vector3(0, 0, 0);
+                break;
+            case 012:
+                //ChaosMeteor
+                //spell completed indicator
+                spellCounter = new Vector3(0, 0, 0);
+                break;
+            case 111:
+                //DeafeningBlast
+                //spell completed indicator
+                spellCounter = new Vector3(0, 0, 0);
+                break;
+            
+        }
+    }
+
+    private void QuasWexExort()
+    {
         if(Spell.Count != 3)
         {
             if(Input.GetKeyDown(KeyCode.Q))
@@ -61,64 +143,8 @@ public class SpellCast : MonoBehaviour
             }
         }
 
-        
-
-    }
-
-    private void castSpell()
-    {
-        for(int i = 0; i < Spell.Count; i++)
-        {
-            if(Spell[i] == KeyCode.Q)
-            {
-                spellCounter.x += 1; 
-            }
-            else if(Spell[i] == KeyCode.W)
-            {
-                spellCounter.y += 1;
-            }
-            else if(Spell[i] == KeyCode.E)
-            {
-                spellCounter.z += 1;
-            }
-        }
-
-        float spellCode = 100 * spellCounter.x + 10 * spellCounter.y + spellCounter.z;
-        int code = (int) spellCode;
-
-        switch(code)
-        {
-            case 300:
-                //ColdSnap
-                break;
-            case 210:
-                //GhostWalk
-                break;
-            case 201:
-                //IceWall
-                break;
-            case 030:
-                //emp
-                break;
-            case 120:
-                //tornado
-                break;
-            case 021:
-                //alacrity
-                break;
-            case 003:
-                //SunStrike
-                break;
-            case 102:
-                //ForgeSpirit
-                break;
-            case 012:
-                //ChaosMeteor
-                break;
-            case 111:
-                //DeafeningBlast
-                break;
-            
-        }
+        Spell[0] = Spell[1];
+        Spell[1] = Spell[2];
+        Spell[2] = inputKey;
     }
 }

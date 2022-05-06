@@ -52,6 +52,7 @@ public class SpellCast : MonoBehaviour
         }
 
         float spellCode = 100 * spellCounter.x + 10 * spellCounter.y + spellCounter.z;
+        Debug.Log(spellCode);
         int code = (int) spellCode;
 
         switch(code)
@@ -59,51 +60,61 @@ public class SpellCast : MonoBehaviour
             case 300:
                 //ColdSnap
                 //spell completed indicator
+                Debug.Log("Cold Snap");
                 spellCounter = new Vector3(0, 0, 0);
                 break;
             case 210:
                 //GhostWalk
                 //spell completed indicator
+                Debug.Log("Ghost Walk");
                 spellCounter = new Vector3(0, 0, 0);
                 break;
             case 201:
                 //IceWall
                 //spell completed indicator
+                Debug.Log("Ice Wall");
                 spellCounter = new Vector3(0, 0, 0);
                 break;
             case 030:
                 //emp
                 //spell completed indicator
+                Debug.Log("EMP");
                 spellCounter = new Vector3(0, 0, 0);
                 break;
             case 120:
                 //tornado
                 //spell completed indicator
+                Debug.Log("Tornado");
                 spellCounter = new Vector3(0, 0, 0);
                 break;
             case 021:
                 //alacrity
                 //spell completed indicator
+                Debug.Log("Alacrity");
                 spellCounter = new Vector3(0, 0, 0);
                 break;
             case 003:
                 //SunStrike
                 //spell completed indicator
+                Debug.Log("Sun Strike");
                 spellCounter = new Vector3(0, 0, 0);
                 break;
             case 102:
                 //ForgeSpirit
                 //spell completed indicator
+                Debug.Log("Forge Spirit");
                 spellCounter = new Vector3(0, 0, 0);
                 break;
             case 012:
                 //ChaosMeteor
                 //spell completed indicator
+                Debug.Log("Chaos Meteor");
                 spellCounter = new Vector3(0, 0, 0);
                 break;
             case 111:
                 //DeafeningBlast
                 //spell completed indicator
+                Debug.Log("Defeaning Blast");
                 spellCounter = new Vector3(0, 0, 0);
                 break;
             
@@ -132,24 +143,29 @@ public class SpellCast : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.Q))
             {
                 inputKey = KeyCode.Q;
-                Spell[0] = Spell[1];
-                Spell[1] = Spell[2];
-                Spell[2] = inputKey;
+                QuasWexExortSwitch();
             }
             else if(Input.GetKeyDown(KeyCode.W))
             {
                 inputKey = KeyCode.W;
-                Spell[0] = Spell[1];
-                Spell[1] = Spell[2];
-                Spell[2] = inputKey;
+                QuasWexExortSwitch();
             }
             else if(Input.GetKeyDown(KeyCode.E))
             {
                 inputKey = KeyCode.E;
-                Spell[0] = Spell[1];
-                Spell[1] = Spell[2];
-                Spell[2] = inputKey;
+                QuasWexExortSwitch();
             }
         }
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            castSpell();
+        }
+    }
+
+    private void QuasWexExortSwitch()
+    {
+        Spell[0] = Spell[1];
+        Spell[1] = Spell[2];
+        Spell[2] = inputKey;
     }
 }

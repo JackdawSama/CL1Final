@@ -141,10 +141,9 @@ public class SpellCast : MonoBehaviour
             {
                 inputKey = KeyCode.E;
             }
+            Spell[0] = Spell[1];
+            Spell[1] = Spell[2];
+            Spell[2] = inputKey;
         }
-
-        Spell[0] = Spell[1];
-        Spell[1] = Spell[2];
-        Spell[2] = inputKey;
     }
 }

@@ -132,18 +132,24 @@ public class SpellCast : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.Q))
             {
                 inputKey = KeyCode.Q;
+                Spell[0] = Spell[1];
+                Spell[1] = Spell[2];
+                Spell[2] = inputKey;
             }
             else if(Input.GetKeyDown(KeyCode.W))
             {
                 inputKey = KeyCode.W;
+                Spell[0] = Spell[1];
+                Spell[1] = Spell[2];
+                Spell[2] = inputKey;
             }
             else if(Input.GetKeyDown(KeyCode.E))
             {
                 inputKey = KeyCode.E;
+                Spell[0] = Spell[1];
+                Spell[1] = Spell[2];
+                Spell[2] = inputKey;
             }
-            Spell[0] = Spell[1];
-            Spell[1] = Spell[2];
-            Spell[2] = inputKey;
         }
     }
 }

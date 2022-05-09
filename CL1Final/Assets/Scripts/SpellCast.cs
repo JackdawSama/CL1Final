@@ -113,8 +113,8 @@ public class SpellCast : MonoBehaviour
             case 300:
                 //ColdSnap
                 //spell completed indicator
-                Debug.Log("Cold Snap");
-                // gameManagerRef.spellCast.text = "Cold Snap";
+                //Debug.Log("Cold Snap");
+                gameManagerRef.GetComponent<GameManager>().spellCast.text = "You cast Cold Snap";
                 gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
@@ -122,8 +122,8 @@ public class SpellCast : MonoBehaviour
             case 210:
                 //GhostWalk
                 //spell completed indicator
-                Debug.Log("Ghost Walk");
-                // gameManagerRef.spellCast.text = "Ghost Walk";
+                //Debug.Log("Ghost Walk");
+                gameManagerRef.GetComponent<GameManager>().spellCast.text = "You cast Ghost Walk";
                 gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
@@ -131,8 +131,8 @@ public class SpellCast : MonoBehaviour
             case 201:
                 //IceWall
                 //spell completed indicator
-                Debug.Log("Ice Wall");
-                // gameManagerRef.spellCast.text = "Ice Wall";
+                //Debug.Log("Ice Wall");
+                gameManagerRef.GetComponent<GameManager>().spellCast.text = "You cast Ice Wall";
                 gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
@@ -140,8 +140,8 @@ public class SpellCast : MonoBehaviour
             case 030:
                 //emp
                 //spell completed indicator
-                Debug.Log("EMP");
-                // gameManagerRef.spellCast.text = "EMP";
+                //Debug.Log("EMP");
+                gameManagerRef.GetComponent<GameManager>().spellCast.text = "You cast EMP";
                 gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
@@ -149,8 +149,8 @@ public class SpellCast : MonoBehaviour
             case 120:
                 //tornado
                 //spell completed indicator
-                Debug.Log("Tornado");
-                // gameManagerRef.spellCast.text = "Tornado";
+                //Debug.Log("Tornado");
+                gameManagerRef.GetComponent<GameManager>().spellCast.text = "You cast Tornado";
                 gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
@@ -158,8 +158,8 @@ public class SpellCast : MonoBehaviour
             case 021:
                 //alacrity
                 //spell completed indicator
-                Debug.Log("Alacrity");
-                // gameManagerRef.spellCast.text = "Alacrity";
+                //Debug.Log("Alacrity");
+                gameManagerRef.GetComponent<GameManager>().spellCast.text = "You cast Alacrity";
                 gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
@@ -167,8 +167,8 @@ public class SpellCast : MonoBehaviour
             case 003:
                 //SunStrike
                 //spell completed indicator
-                Debug.Log("Sun Strike");
-                // gameManagerRef.spellCast.text = "Sun Strike";
+                //Debug.Log("Sun Strike");
+                gameManagerRef.GetComponent<GameManager>().spellCast.text = "You cast Sun Strike";
                 gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
@@ -176,8 +176,8 @@ public class SpellCast : MonoBehaviour
             case 102:
                 //ForgeSpirit
                 //spell completed indicator
-                Debug.Log("Forge Spirit");
-                // gameManagerRef.spellCast.text = "Forge Spirit";
+                //Debug.Log("Forge Spirit");
+                gameManagerRef.GetComponent<GameManager>().spellCast.text = "You cast Forge Spirit";
                 gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
@@ -185,8 +185,8 @@ public class SpellCast : MonoBehaviour
             case 012:
                 //ChaosMeteor
                 //spell completed indicator
-                Debug.Log("Chaos Meteor");
-                // gameManagerRef.spellCast.text = "Chaos Meteor";
+                //Debug.Log("Chaos Meteor");
+                gameManagerRef.GetComponent<GameManager>().spellCast.text = "You cast Chaos Meteor";
                 gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
@@ -194,8 +194,8 @@ public class SpellCast : MonoBehaviour
             case 111:
                 //DeafeningBlast
                 //spell completed indicator
-                Debug.Log("Defeaning Blast");
-                // gameManagerRef.spellCast.text = "Deafening Blast";
+                //Debug.Log("Defeaning Blast");
+                gameManagerRef.GetComponent<GameManager>().spellCast.text = "You cast Deafening Blast";
                 gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");

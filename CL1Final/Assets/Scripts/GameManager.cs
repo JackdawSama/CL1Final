@@ -17,7 +17,9 @@ public class GameManager : MonoBehaviour
 
     public Text trySpell;
     public Text spellCast;
-    int spellRandomiser;
+    public int spellRandomiser;
+
+    public GameObject InvokerHero;
 
     Dictionary<int, string> spellBook = new Dictionary<int, string>();
 
@@ -39,8 +41,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         timerRunning = true;
-        spellRandomiser = Random.Range(1,10);
-        trySpell.text = spellBook[spellRandomiser];
+        SpellRandomiser();
         //Debug.Log("Testing Dictionary : " + spellBook[1]);
     }
 
@@ -48,6 +49,11 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         Timer();
+
+        if(remainingTime <= 0)
+        {
+            GameObject.DestroyImmediate(InvokerHero);
+        }
     }
 
     void Timer()
@@ -88,5 +94,11 @@ public class GameManager : MonoBehaviour
         spellBook.Add(8, "Forge Spirit");
         spellBook.Add(9, "Chaos Meteor");
         spellBook.Add(10, "Deafening Blast");
+    }
+
+    public void SpellRandomiser()
+    {
+        spellRandomiser = Random.Range(1,10);
+        trySpell.text = spellBook[spellRandomiser];
     }
 }

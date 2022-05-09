@@ -10,7 +10,7 @@ public class SpellCast : MonoBehaviour
     Vector3 spellCounter = new Vector3(0, 0, 0);
     int spellCastCounter;
 
-    GameManager gameManagerRef;
+    public GameObject gameManagerRef;
 
     enum SpellBook                                                                              //enum to store the list of spell combinations available
     {
@@ -28,14 +28,14 @@ public class SpellCast : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameManagerRef = GetComponent<GameManager>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         QuasWexExort();                                                                     //function to check for spell input and cast spells
-        Debug.Log("You cast " + spellCastCounter + " spell(s) in 30s");
+        // Debug.Log("You cast " + spellCastCounter + " spell(s)");
     }
 
     private void QuasWexExort()
@@ -115,70 +115,90 @@ public class SpellCast : MonoBehaviour
                 //spell completed indicator
                 Debug.Log("Cold Snap");
                 // gameManagerRef.spellCast.text = "Cold Snap";
+                gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
+                Debug.Log("You cast " + spellCastCounter + " spell(s)");
                 break;
             case 210:
                 //GhostWalk
                 //spell completed indicator
                 Debug.Log("Ghost Walk");
                 // gameManagerRef.spellCast.text = "Ghost Walk";
+                gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
+                Debug.Log("You cast " + spellCastCounter + " spell(s)");
                 break;
             case 201:
                 //IceWall
                 //spell completed indicator
                 Debug.Log("Ice Wall");
                 // gameManagerRef.spellCast.text = "Ice Wall";
+                gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
+                Debug.Log("You cast " + spellCastCounter + " spell(s)");
                 break;
             case 030:
                 //emp
                 //spell completed indicator
                 Debug.Log("EMP");
                 // gameManagerRef.spellCast.text = "EMP";
+                gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
+                Debug.Log("You cast " + spellCastCounter + " spell(s)");
                 break;
             case 120:
                 //tornado
                 //spell completed indicator
                 Debug.Log("Tornado");
                 // gameManagerRef.spellCast.text = "Tornado";
+                gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
+                Debug.Log("You cast " + spellCastCounter + " spell(s)");
                 break;
             case 021:
                 //alacrity
                 //spell completed indicator
                 Debug.Log("Alacrity");
                 // gameManagerRef.spellCast.text = "Alacrity";
+                gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
+                Debug.Log("You cast " + spellCastCounter + " spell(s)");
                 break;
             case 003:
                 //SunStrike
                 //spell completed indicator
                 Debug.Log("Sun Strike");
                 // gameManagerRef.spellCast.text = "Sun Strike";
+                gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
+                Debug.Log("You cast " + spellCastCounter + " spell(s)");
                 break;
             case 102:
                 //ForgeSpirit
                 //spell completed indicator
                 Debug.Log("Forge Spirit");
                 // gameManagerRef.spellCast.text = "Forge Spirit";
+                gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
+                Debug.Log("You cast " + spellCastCounter + " spell(s)");
                 break;
             case 012:
                 //ChaosMeteor
                 //spell completed indicator
                 Debug.Log("Chaos Meteor");
                 // gameManagerRef.spellCast.text = "Chaos Meteor";
+                gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
+                Debug.Log("You cast " + spellCastCounter + " spell(s)");
                 break;
             case 111:
                 //DeafeningBlast
                 //spell completed indicator
                 Debug.Log("Defeaning Blast");
                 // gameManagerRef.spellCast.text = "Deafening Blast";
+                gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
+                Debug.Log("You cast " + spellCastCounter + " spell(s)");
                 break;
             
         }

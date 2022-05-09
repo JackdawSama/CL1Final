@@ -487,6 +487,8 @@ MonoBehaviour:
   timerInfo: {fileID: 1610336898}
   trySpell: {fileID: 1097050574}
   spellCast: {fileID: 138136484}
+  spellRandomiser: 0
+  InvokerHero: {fileID: 1785543067}
 --- !u!1 &368483497
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,7 +610,7 @@ GameObject:
   - component: {fileID: 428667915}
   - component: {fileID: 428667917}
   m_Layer: 0
-  m_Name: Orb1
+  m_Name: Orb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -677,7 +679,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 1785543068}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &428667917
 CircleCollider2D:
@@ -1396,7 +1398,7 @@ GameObject:
   - component: {fileID: 1521496730}
   - component: {fileID: 1521496732}
   m_Layer: 0
-  m_Name: Orb2
+  m_Name: Orb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1465,7 +1467,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 1785543068}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1521496732
 CircleCollider2D:
@@ -1811,6 +1813,7 @@ GameObject:
   - component: {fileID: 1785543069}
   - component: {fileID: 1785543070}
   - component: {fileID: 1785543071}
+  - component: {fileID: 1785543072}
   m_Layer: 0
   m_Name: Invoker
   m_TagString: Untagged
@@ -1830,8 +1833,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 368483499}
-  - {fileID: 428667916}
   - {fileID: 1521496731}
+  - {fileID: 428667916}
   - {fileID: 1272484957}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -1848,9 +1851,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de7e5c97c227cb045915b5029162c0b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orb1: {fileID: 428667915}
-  orb2: {fileID: 1521496730}
-  orb3: {fileID: 1272484956}
+  orb1: {fileID: 1521496729}
+  orb2: {fileID: 428667914}
+  orb3: {fileID: 1272484955}
 --- !u!114 &1785543070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1864,6 +1867,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Spell: 
+  gameManagerRef: {fileID: 303113375}
 --- !u!114 &1785543071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1877,6 +1881,57 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 10
+--- !u!212 &1785543072
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785543067}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &2037873838
 GameObject:
   m_ObjectHideFlags: 0

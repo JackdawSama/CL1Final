@@ -15,6 +15,12 @@ public class GameManager : MonoBehaviour
     public bool timerRunning = false;
     public Text timerInfo;
 
+    public Text trySpell;
+    public Text spellCast;
+    int spellRandomiser;
+
+    Dictionary<int, string> spellBook = new Dictionary<int, string>();
+
     void Awake()
     {
         if (instance != null && instance != this)                                           //checking for a single instance of the Game Manager
@@ -26,11 +32,16 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(this);
             instance = this;
         }
+
+        SpellBook();
     }
     // Start is called before the first frame update
     void Start()
     {
         timerRunning = true;
+        spellRandomiser = Random.Range(1,10);
+        trySpell.text = spellBook[spellRandomiser];
+        //Debug.Log("Testing Dictionary : " + spellBook[1]);
     }
 
     // Update is called once per frame
@@ -63,5 +74,19 @@ public class GameManager : MonoBehaviour
         float seconds = Mathf.FloorToInt(displayTime%60);
 
         timerInfo.text = string.Format("{0:00} : {1:00}", minutes, seconds);
+    }
+
+    void SpellBook()
+    {
+        spellBook.Add(1, "Cold Snap");
+        spellBook.Add(2, "Ghost Walk");
+        spellBook.Add(3, "Ice Wall");
+        spellBook.Add(4, "EMP");
+        spellBook.Add(5, "Tornado");
+        spellBook.Add(6, "Alacrity");
+        spellBook.Add(7, "Sun Strike");
+        spellBook.Add(8, "Forge Spirit");
+        spellBook.Add(9, "Chaos Meteor");
+        spellBook.Add(10, "Deafening Blast");
     }
 }

@@ -114,70 +114,70 @@ public class SpellCast : MonoBehaviour
                 //ColdSnap
                 //spell completed indicator
                 Debug.Log("Cold Snap");
-                gameManagerRef.spellCast.text = "Cold Snap";
+                // gameManagerRef.spellCast.text = "Cold Snap";
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
                 break;
             case 210:
                 //GhostWalk
                 //spell completed indicator
                 Debug.Log("Ghost Walk");
-                gameManagerRef.spellCast.text = "Ghost Walk";
+                // gameManagerRef.spellCast.text = "Ghost Walk";
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
                 break;
             case 201:
                 //IceWall
                 //spell completed indicator
                 Debug.Log("Ice Wall");
-                gameManagerRef.spellCast.text = "Ice Wall";
+                // gameManagerRef.spellCast.text = "Ice Wall";
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
                 break;
             case 030:
                 //emp
                 //spell completed indicator
                 Debug.Log("EMP");
-                gameManagerRef.spellCast.text = "EMP";
+                // gameManagerRef.spellCast.text = "EMP";
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
                 break;
             case 120:
                 //tornado
                 //spell completed indicator
                 Debug.Log("Tornado");
-                gameManagerRef.spellCast.text = "Tornado";
+                // gameManagerRef.spellCast.text = "Tornado";
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
                 break;
             case 021:
                 //alacrity
                 //spell completed indicator
                 Debug.Log("Alacrity");
-                gameManagerRef.spellCast.text = "Alacrity";
+                // gameManagerRef.spellCast.text = "Alacrity";
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
                 break;
             case 003:
                 //SunStrike
                 //spell completed indicator
                 Debug.Log("Sun Strike");
-                gameManagerRef.spellCast.text = "Sun Strike";
+                // gameManagerRef.spellCast.text = "Sun Strike";
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
                 break;
             case 102:
                 //ForgeSpirit
                 //spell completed indicator
                 Debug.Log("Forge Spirit");
-                gameManagerRef.spellCast.text = "Forge Spirit";
+                // gameManagerRef.spellCast.text = "Forge Spirit";
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
                 break;
             case 012:
                 //ChaosMeteor
                 //spell completed indicator
                 Debug.Log("Chaos Meteor");
-                gameManagerRef.spellCast.text = "Chaos Meteor";
+                // gameManagerRef.spellCast.text = "Chaos Meteor";
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
                 break;
             case 111:
                 //DeafeningBlast
                 //spell completed indicator
                 Debug.Log("Defeaning Blast");
-                gameManagerRef.spellCast.text = "Deafening Blast";
+                // gameManagerRef.spellCast.text = "Deafening Blast";
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
                 break;
             

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 4c08e522d318e284d85b2d1b56d8cdb8
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - iceWall: {fileID: 8168426087789444940, guid: 4c721937d3df09748a1f4481ac1a9827, type: 3}
+  - emp: {fileID: 35772889587750319, guid: efa20b7f8fd6e2844aabaae8721ad952, type: 3}
+  - tornado: {fileID: 6966822916288436305, guid: 44f543fe0de0a77448d7c981d761dd90, type: 3}
+  - sunStrike: {fileID: 6683312883303787089, guid: b7fcfaa5f163f3c4cb43375d1706ca27, type: 3}
+  - forgeSpirit: {fileID: 3535357919164495256, guid: f45fe9d4395ffaa4c84600513328146c, type: 3}
+  - chaosMeteor: {fileID: 724236007764350395, guid: 6d70d9af1e595df408b6f30eed1a29b5, type: 3}
+  - deafeningBlast: {fileID: 6612881735722098376, guid: f3c9bff71c6e0c44da2e0369d91ba5db, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

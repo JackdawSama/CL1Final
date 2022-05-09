@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SpellUtil;
 
 public class SpellCast : MonoBehaviour
 {
@@ -100,7 +101,7 @@ public class SpellCast : MonoBehaviour
         }
 
         float spellCode = 100 * spellCounter.x + 10 * spellCounter.y + spellCounter.z;      //converts the counter information into a float
-        Debug.Log(spellCode);
+        //Debug.Log(spellCode);
         int code = (int) spellCode;                                                         //converts the float into a integer for Switch statement parsing
 
         switch(code)

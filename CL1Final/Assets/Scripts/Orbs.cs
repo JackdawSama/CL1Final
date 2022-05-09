@@ -18,7 +18,7 @@ public class Orbs : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(spellcastref.Spell.Count == 3)
+        if(spellcastref.Spell.Count <= 3)
         {
             if(spellcastref.Spell[0] == KeyCode.Q)
             {

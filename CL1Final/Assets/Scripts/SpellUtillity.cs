@@ -25,61 +25,61 @@ namespace SpellUtil
             
         }
 
-        public IEnumerator ColdSnap()
+        public static IEnumerator ColdSnap()
         {
             yield return null;
         }
-        public IEnumerator GhostWalk()
+        public static IEnumerator GhostWalk()
         {
             yield return null;
         }
-        public IEnumerator IceWall()
+        public static IEnumerator IceWall()
         {
-            Instantiate(iceWall);
-            yield return new WaitForSeconds(3);
-            GameObject.Destroy(iceWall, 1);
+            //Instantiate(iceWall);
+            yield return null;
+            //GameObject.Destroy(iceWall, 1);
         }
-        public IEnumerator EMP()
+        public static IEnumerator EMP()
         {
-            Instantiate(emp);
-            yield return new WaitForSeconds(2);
-            GameObject.Destroy(emp);
+            //Instantiate(emp);
+            yield return null;
+            //GameObject.Destroy(emp);
         }
-        public IEnumerator Tornado()
+        public static IEnumerator Tornado()
         {
-            Instantiate(tornado);
-            yield return new WaitForSeconds(3);
-            GameObject.Destroy(tornado);
+            //Instantiate(tornado);
+            yield return null;
+            //GameObject.Destroy(tornado);
         }
-        public IEnumerator Alacrity()
+        public static IEnumerator Alacrity()
         {
             yield return null;
         }
-        public IEnumerator SunStrike()
+        public static IEnumerator SunStrike()
         {
-            Instantiate(sunStrike);
-            yield return new WaitForSeconds(1.5f);
-            GameObject.Destroy(sunStrike);
+            //Instantiate(sunStrike);
+            yield return null;
+            //GameObject.Destroy(sunStrike);
         }
-        public IEnumerator ForgeSpirit()
+        public static IEnumerator ForgeSpirit()
         {
-            Instantiate(forgeSpirit);
-            yield return new WaitForSeconds(5);
-            GameObject.Destroy(forgeSpirit);
+            //Instantiate(forgeSpirit);
+            yield return null;
+            //GameObject.Destroy(forgeSpirit);
         }
 
-        public IEnumerator ChaosMeteor()
+        public static IEnumerator ChaosMeteor()
         {
-            Instantiate(chaosMeteor);
-            yield return new WaitForSeconds(3);
-            GameObject.Destroy(chaosMeteor);
+            //Instantiate(chaosMeteor);
+            yield return null;
+            //GameObject.Destroy(chaosMeteor);
         }
 
-        public IEnumerator DeafeningBlast()
+        public static IEnumerator DeafeningBlast()
         {
-            Instantiate(deafeningBlast);
-            yield return new WaitForSeconds(3);
-            GameObject.Destroy(deafeningBlast);
+            //Instantiate(deafeningBlast);
+            yield return null;
+            //GameObject.Destroy(deafeningBlast);
         }
 
     }

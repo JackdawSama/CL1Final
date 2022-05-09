@@ -8,7 +8,8 @@ public class SpellCast : MonoBehaviour
     public List<KeyCode> Spell;
     KeyCode inputKey;
     Vector3 spellCounter = new Vector3(0, 0, 0);
-    int spellCastCounter;
+    int spellCastCounter = 0;
+    int rightspellcastCounter = 0;
 
     public GameObject gameManagerRef;
 
@@ -108,6 +109,8 @@ public class SpellCast : MonoBehaviour
         //Debug.Log(spellCode);
         int spellParse = (int) spellCode;                                                         //converts the float into a integer for Switch statement parsing
 
+        spellCastCounter++;
+
         switch(spellParse)
         {
             case 300:
@@ -115,8 +118,16 @@ public class SpellCast : MonoBehaviour
                 //spell completed indicator
                 //Debug.Log("Cold Snap");
                 gameManagerRef.GetComponent<GameManager>().spellCast.text = "You cast Cold Snap";
+
+                if(gameManagerRef.GetComponent<GameManager>().spellRandomiser == 1)
+                {
+                    rightspellcastCounter++;
+                    Debug.Log("Spell Count " + rightspellcastCounter);
+                }
+
                 gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
+                //StartCoroutine(SpellUtillity.ColdSnap());
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
                 break;
             case 210:
@@ -124,6 +135,13 @@ public class SpellCast : MonoBehaviour
                 //spell completed indicator
                 //Debug.Log("Ghost Walk");
                 gameManagerRef.GetComponent<GameManager>().spellCast.text = "You cast Ghost Walk";
+                
+                if(gameManagerRef.GetComponent<GameManager>().spellRandomiser == 2)
+                {
+                    rightspellcastCounter++;
+                    Debug.Log("Spell Count " + rightspellcastCounter);
+                }
+                
                 gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
@@ -133,6 +151,11 @@ public class SpellCast : MonoBehaviour
                 //spell completed indicator
                 //Debug.Log("Ice Wall");
                 gameManagerRef.GetComponent<GameManager>().spellCast.text = "You cast Ice Wall";
+                if(gameManagerRef.GetComponent<GameManager>().spellRandomiser == 3)
+                {
+                    rightspellcastCounter++;
+                    Debug.Log("Spell Count " + rightspellcastCounter);
+                }
                 gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
@@ -142,6 +165,11 @@ public class SpellCast : MonoBehaviour
                 //spell completed indicator
                 //Debug.Log("EMP");
                 gameManagerRef.GetComponent<GameManager>().spellCast.text = "You cast EMP";
+                if(gameManagerRef.GetComponent<GameManager>().spellRandomiser == 4)
+                {
+                    rightspellcastCounter++;
+                    Debug.Log("Spell Count " + rightspellcastCounter);
+                }
                 gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
@@ -151,6 +179,11 @@ public class SpellCast : MonoBehaviour
                 //spell completed indicator
                 //Debug.Log("Tornado");
                 gameManagerRef.GetComponent<GameManager>().spellCast.text = "You cast Tornado";
+                if(gameManagerRef.GetComponent<GameManager>().spellRandomiser == 5)
+                {
+                    rightspellcastCounter++;
+                    Debug.Log("Spell Count " + rightspellcastCounter);
+                }
                 gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
@@ -160,6 +193,11 @@ public class SpellCast : MonoBehaviour
                 //spell completed indicator
                 //Debug.Log("Alacrity");
                 gameManagerRef.GetComponent<GameManager>().spellCast.text = "You cast Alacrity";
+                if(gameManagerRef.GetComponent<GameManager>().spellRandomiser == 6)
+                {
+                    rightspellcastCounter++;
+                    Debug.Log("Spell Count " + rightspellcastCounter);
+                }
                 gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
@@ -169,6 +207,11 @@ public class SpellCast : MonoBehaviour
                 //spell completed indicator
                 //Debug.Log("Sun Strike");
                 gameManagerRef.GetComponent<GameManager>().spellCast.text = "You cast Sun Strike";
+                if(gameManagerRef.GetComponent<GameManager>().spellRandomiser == 7)
+                {
+                    rightspellcastCounter++;
+                    Debug.Log("Spell Count " + rightspellcastCounter);
+                }
                 gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
@@ -178,6 +221,11 @@ public class SpellCast : MonoBehaviour
                 //spell completed indicator
                 //Debug.Log("Forge Spirit");
                 gameManagerRef.GetComponent<GameManager>().spellCast.text = "You cast Forge Spirit";
+                if(gameManagerRef.GetComponent<GameManager>().spellRandomiser == 8)
+                {
+                    rightspellcastCounter++;
+                    Debug.Log("Spell Count " + rightspellcastCounter);
+                }
                 gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
@@ -187,6 +235,11 @@ public class SpellCast : MonoBehaviour
                 //spell completed indicator
                 //Debug.Log("Chaos Meteor");
                 gameManagerRef.GetComponent<GameManager>().spellCast.text = "You cast Chaos Meteor";
+                if(gameManagerRef.GetComponent<GameManager>().spellRandomiser == 9)
+                {
+                    rightspellcastCounter++;
+                    Debug.Log("Spell Count " + rightspellcastCounter);
+                }
                 gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
@@ -196,12 +249,17 @@ public class SpellCast : MonoBehaviour
                 //spell completed indicator
                 //Debug.Log("Defeaning Blast");
                 gameManagerRef.GetComponent<GameManager>().spellCast.text = "You cast Deafening Blast";
+                if(gameManagerRef.GetComponent<GameManager>().spellRandomiser == 10)
+                {
+                    rightspellcastCounter++;
+                    Debug.Log("Spell Count " + rightspellcastCounter);
+                }
                 gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
                 break;
             
         }
-        spellCastCounter++;
+
     }
 }

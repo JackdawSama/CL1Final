@@ -5,17 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwitch : MonoBehaviour
 {
-    private void Start() 
-    {
-        DontDestroyOnLoad(gameObject);    
-    }
     public void MainMenu()
     {
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene("Main Menu");            //loads the Main Menu scene
     }
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("Spell Practice");
+        SceneManager.LoadScene("Spell Practice");       //loads the Spell Practice scene
     }
 }

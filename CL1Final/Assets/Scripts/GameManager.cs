@@ -23,9 +23,9 @@ public class GameManager : MonoBehaviour
 
     public Text points;
     public Text spellsCast;
-    public Text accuracy;
 
-    public GameObject InvokerHero;
+    public GameObject invokerHero;
+    public GameObject playAgain;
 
     Dictionary<int, string> spellBook = new Dictionary<int, string>();
 
@@ -46,10 +46,9 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //DontDestroyOnLoad(gameObject);                                                      //
+        playAgain.SetActive(false);                                                      //
         timerRunning = true;
         SpellRandomiser();
-        //Debug.Log("Testing Dictionary : " + spellBook[1]);
     }
 
     // Update is called once per frame
@@ -59,15 +58,12 @@ public class GameManager : MonoBehaviour
 
         if(remainingTime <= 0)
         {
-            GameObject.DestroyImmediate(InvokerHero);
-            SceneManager.LoadScene("Play Again");
+            GameObject.DestroyImmediate(invokerHero);
+            playAgain.SetActive(true);
         }
 
-        points.text = InvokerHero.GetComponent<SpellCast>().rightspellcastCounter.ToString();
-        spellsCast.text = InvokerHero.GetComponent<SpellCast>().spellCastCounter.ToString();
-
-        spellAccuracy = (InvokerHero.GetComponent<SpellCast>().rightspellcastCounter/InvokerHero.GetComponent<SpellCast>().spellCastCounter) * 100;
-        accuracy.text = spellAccuracy.ToString();
+        points.text = invokerHero.GetComponent<SpellCast>().rightspellcastCounter.ToString();
+        spellsCast.text = invokerHero.GetComponent<SpellCast>().spellCastCounter.ToString();
         
     }
 

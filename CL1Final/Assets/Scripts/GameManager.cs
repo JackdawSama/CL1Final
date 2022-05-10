@@ -23,7 +23,6 @@ public class GameManager : MonoBehaviour
 
     public Text points;
     public Text spellsCast;
-    public Text finalScore;
     public Text accuracy;
 
     public GameObject InvokerHero;
@@ -66,7 +65,6 @@ public class GameManager : MonoBehaviour
 
         points.text = InvokerHero.GetComponent<SpellCast>().rightspellcastCounter.ToString();
         spellsCast.text = InvokerHero.GetComponent<SpellCast>().spellCastCounter.ToString();
-        finalScore.text = points.text;
 
         spellAccuracy = (InvokerHero.GetComponent<SpellCast>().rightspellcastCounter/InvokerHero.GetComponent<SpellCast>().spellCastCounter) * 100;
         accuracy.text = spellAccuracy.ToString();

@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+///!!!***IMPORTANT NOTE***!!!
+
+///The Player Movement script is not being used but has been built for future functionality.
+
 public class PlayerMovement : MonoBehaviour
 {
     public float playerSpeed = 10f;

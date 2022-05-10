@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+///!!!***IMPORTANT NOTE***!!!
+
+///The Spell Utility script is not being used but has been built for future functionality.
 namespace SpellUtil
 {
     public class SpellUtillity : MonoBehaviour

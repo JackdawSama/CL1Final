@@ -22,43 +22,43 @@ public class Orbs : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(spellcastref.Spell.Count <= 3)
+        if(spellcastref.Spell.Count <= 3)                                       //checks if the size of the queue is less than 3
         {
-            if(spellcastref.Spell[0] == KeyCode.Q)
+            if(spellcastref.Spell[0] == KeyCode.Q)                              //checks if Q has been pressed
             {
-                orb1.GetComponent<SpriteRenderer>().sprite = quas;
+                orb1.GetComponent<SpriteRenderer>().sprite = quas;              //in case of Q being true it switches the sprite to Quas for Orb 1
             }
-            else if(spellcastref.Spell[0] == KeyCode.W)
+            else if(spellcastref.Spell[0] == KeyCode.W)                         //checks if W has been pressed
             {
-                orb1.GetComponent<SpriteRenderer>().sprite = wex;
+                orb1.GetComponent<SpriteRenderer>().sprite = wex;               //in case of W being true it switches the sprite to Wex for Orb 1
             }
-            else if(spellcastref.Spell[0] == KeyCode.E)
+            else if(spellcastref.Spell[0] == KeyCode.E)                         //checks if E has been pressed
             {
-                orb1.GetComponent<SpriteRenderer>().sprite = exort;
+                orb1.GetComponent<SpriteRenderer>().sprite = exort;             //in case of E being true it switches the sprite to Exort for Orb 1
             }
-            if(spellcastref.Spell[1] == KeyCode.Q)
+            if(spellcastref.Spell[1] == KeyCode.Q)                              //checks if Q has been pressed
             {
-                orb2.GetComponent<SpriteRenderer>().sprite = quas;
+                orb2.GetComponent<SpriteRenderer>().sprite = quas;              //in case of Q being true it switches the sprite to Quas for Orb 2
             }
-            else if(spellcastref.Spell[1] == KeyCode.W)
+            else if(spellcastref.Spell[1] == KeyCode.W)                         //checks if W has been pressed
             {
-                orb2.GetComponent<SpriteRenderer>().sprite = wex;
+                orb2.GetComponent<SpriteRenderer>().sprite = wex;               //in case of W being true it switches the sprite to Wex for Orb 2
             }
-            else if(spellcastref.Spell[1] == KeyCode.E)
+            else if(spellcastref.Spell[1] == KeyCode.E)                         //checks if E has been pressed
             {
-                orb2.GetComponent<SpriteRenderer>().sprite = exort;
+                orb2.GetComponent<SpriteRenderer>().sprite = exort;             //in case of E being true it switches the sprite to Wex for Orb 2
             }
-            if(spellcastref.Spell[2] == KeyCode.Q)
+            if(spellcastref.Spell[2] == KeyCode.Q)                              //checks if Q has been pressed
             {
-                orb3.GetComponent<SpriteRenderer>().sprite = quas;
+                orb3.GetComponent<SpriteRenderer>().sprite = quas;              //in case of Q being true it switches the sprite to Quas for Orb 3
             }
-            else if(spellcastref.Spell[2] == KeyCode.W)
+            else if(spellcastref.Spell[2] == KeyCode.W)                         //checks if W has been pressed
             {
-                orb3.GetComponent<SpriteRenderer>().sprite = wex;
+                orb3.GetComponent<SpriteRenderer>().sprite = wex;               //in case of W being true it switches the sprite to Wex for Orb 3
             }
-            else if(spellcastref.Spell[2] == KeyCode.E)
+            else if(spellcastref.Spell[2] == KeyCode.E)                         //checks if E has been pressed
             {
-                orb3.GetComponent<SpriteRenderer>().sprite = exort;
+                orb3.GetComponent<SpriteRenderer>().sprite = exort;             //in case of E being true it switches the sprite to Exort for Orb 3
             }
         }
     }

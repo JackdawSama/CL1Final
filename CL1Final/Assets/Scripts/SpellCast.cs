@@ -13,6 +13,18 @@ public class SpellCast : MonoBehaviour
 
     public GameObject gameManagerRef;
 
+    public AudioSource audioSource;
+    public AudioClip coldSnap;
+    public AudioClip ghostWalk;
+    public AudioClip iceWall;
+    public AudioClip emp;
+    public AudioClip tornado;
+    public AudioClip alacrity;
+    public AudioClip sunStrike;
+    public AudioClip forgeSpirit;
+    public AudioClip chaosMeteor;
+    public AudioClip deafeningBlast;
+
     enum SpellBook                                                                              //enum to store the list of spell combinations available
     {
         coldSnap = 300,
@@ -106,7 +118,6 @@ public class SpellCast : MonoBehaviour
         }
 
         float spellCode = 100 * spellCounter.x + 10 * spellCounter.y + spellCounter.z;                  //converts the counter information into a float
-        //Debug.Log(spellCode);
         int spellParse = (int) spellCode;                                                               //converts the float into a integer for Switch statement parsing
 
         spellCastCounter++;
@@ -114,30 +125,25 @@ public class SpellCast : MonoBehaviour
         switch(spellParse)
         {
             case 300:
-                //ColdSnap
-                //spell completed indicator
-                //Debug.Log("Cold Snap");
                 gameManagerRef.GetComponent<GameManager>().spellCast.text = "You cast Cold Snap";
 
                 if(gameManagerRef.GetComponent<GameManager>().spellRandomiser == 1)
                 {
                     rightspellcastCounter++;
+                    audioSource.PlayOneShot(coldSnap, 0.5f);
                     Debug.Log("Spell Count " + rightspellcastCounter);
                     gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 }
                 spellCounter = new Vector3(0, 0, 0);                                                    //resets the spell counter to 0 after spell is cast
-                //StartCoroutine(SpellUtillity.ColdSnap());
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
                 break;
             case 210:
-                //GhostWalk
-                //spell completed indicator
-                //Debug.Log("Ghost Walk");
                 gameManagerRef.GetComponent<GameManager>().spellCast.text = "You cast Ghost Walk";
                 
                 if(gameManagerRef.GetComponent<GameManager>().spellRandomiser == 2)
                 {
                     rightspellcastCounter++;
+                    audioSource.PlayOneShot(ghostWalk, 0.5f);
                     Debug.Log("Spell Count " + rightspellcastCounter);
                     gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 }
@@ -145,13 +151,11 @@ public class SpellCast : MonoBehaviour
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
                 break;
             case 201:
-                //IceWall
-                //spell completed indicator
-                //Debug.Log("Ice Wall");
                 gameManagerRef.GetComponent<GameManager>().spellCast.text = "You cast Ice Wall";
                 if(gameManagerRef.GetComponent<GameManager>().spellRandomiser == 3)
                 {
                     rightspellcastCounter++;
+                    audioSource.PlayOneShot(iceWall, 0.5f);
                     Debug.Log("Spell Count " + rightspellcastCounter);
                     gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 }
@@ -159,13 +163,11 @@ public class SpellCast : MonoBehaviour
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
                 break;
             case 030:
-                //emp
-                //spell completed indicator
-                //Debug.Log("EMP");
                 gameManagerRef.GetComponent<GameManager>().spellCast.text = "You cast EMP";
                 if(gameManagerRef.GetComponent<GameManager>().spellRandomiser == 4)
                 {
                     rightspellcastCounter++;
+                    audioSource.PlayOneShot(emp, 0.5f);
                     Debug.Log("Spell Count " + rightspellcastCounter);
                     gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 }
@@ -173,13 +175,11 @@ public class SpellCast : MonoBehaviour
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
                 break;
             case 120:
-                //tornado
-                //spell completed indicator
-                //Debug.Log("Tornado");
                 gameManagerRef.GetComponent<GameManager>().spellCast.text = "You cast Tornado";
                 if(gameManagerRef.GetComponent<GameManager>().spellRandomiser == 5)
                 {
                     rightspellcastCounter++;
+                    audioSource.PlayOneShot(tornado, 0.5f);
                     Debug.Log("Spell Count " + rightspellcastCounter);
                     gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 }
@@ -187,13 +187,11 @@ public class SpellCast : MonoBehaviour
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
                 break;
             case 021:
-                //alacrity
-                //spell completed indicator
-                //Debug.Log("Alacrity");
                 gameManagerRef.GetComponent<GameManager>().spellCast.text = "You cast Alacrity";
                 if(gameManagerRef.GetComponent<GameManager>().spellRandomiser == 6)
                 {
                     rightspellcastCounter++;
+                    audioSource.PlayOneShot(alacrity, 0.5f);
                     Debug.Log("Spell Count " + rightspellcastCounter);
                     gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 }
@@ -201,13 +199,11 @@ public class SpellCast : MonoBehaviour
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
                 break;
             case 003:
-                //SunStrike
-                //spell completed indicator
-                //Debug.Log("Sun Strike");
                 gameManagerRef.GetComponent<GameManager>().spellCast.text = "You cast Sun Strike";
                 if(gameManagerRef.GetComponent<GameManager>().spellRandomiser == 7)
                 {
                     rightspellcastCounter++;
+                    audioSource.PlayOneShot(sunStrike, 0.5f);
                     Debug.Log("Spell Count " + rightspellcastCounter);
                     gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 }
@@ -215,13 +211,11 @@ public class SpellCast : MonoBehaviour
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
                 break;
             case 102:
-                //ForgeSpirit
-                //spell completed indicator
-                //Debug.Log("Forge Spirit");
                 gameManagerRef.GetComponent<GameManager>().spellCast.text = "You cast Forge Spirit";
                 if(gameManagerRef.GetComponent<GameManager>().spellRandomiser == 8)
                 {
                     rightspellcastCounter++;
+                    audioSource.PlayOneShot(forgeSpirit, 0.5f);
                     Debug.Log("Spell Count " + rightspellcastCounter);
                     gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 }
@@ -229,13 +223,11 @@ public class SpellCast : MonoBehaviour
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
                 break;
             case 012:
-                //ChaosMeteor
-                //spell completed indicator
-                //Debug.Log("Chaos Meteor");
                 gameManagerRef.GetComponent<GameManager>().spellCast.text = "You cast Chaos Meteor";
                 if(gameManagerRef.GetComponent<GameManager>().spellRandomiser == 9)
                 {
                     rightspellcastCounter++;
+                    audioSource.PlayOneShot(chaosMeteor, 0.5f);
                     Debug.Log("Spell Count " + rightspellcastCounter);
                     gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 }
@@ -243,13 +235,11 @@ public class SpellCast : MonoBehaviour
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
                 break;
             case 111:
-                //DeafeningBlast
-                //spell completed indicator
-                //Debug.Log("Defeaning Blast");
                 gameManagerRef.GetComponent<GameManager>().spellCast.text = "You cast Deafening Blast";
                 if(gameManagerRef.GetComponent<GameManager>().spellRandomiser == 10)
                 {
                     rightspellcastCounter++;
+                    audioSource.PlayOneShot(deafeningBlast, 0.5f);
                     Debug.Log("Spell Count " + rightspellcastCounter);
                     gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 }

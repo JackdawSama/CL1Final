@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,6 +19,12 @@ public class GameManager : MonoBehaviour
     public Text trySpell;
     public Text spellCast;
     public int spellRandomiser;
+    float spellAccuracy;
+
+    public Text points;
+    public Text spellsCast;
+    public Text finalScore;
+    public Text accuracy;
 
     public GameObject InvokerHero;
 
@@ -40,6 +47,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //DontDestroyOnLoad(gameObject);                                                      //
         timerRunning = true;
         SpellRandomiser();
         //Debug.Log("Testing Dictionary : " + spellBook[1]);
@@ -53,7 +61,16 @@ public class GameManager : MonoBehaviour
         if(remainingTime <= 0)
         {
             GameObject.DestroyImmediate(InvokerHero);
+            SceneManager.LoadScene("Play Again");
         }
+
+        points.text = InvokerHero.GetComponent<SpellCast>().rightspellcastCounter.ToString();
+        spellsCast.text = InvokerHero.GetComponent<SpellCast>().spellCastCounter.ToString();
+        finalScore.text = points.text;
+
+        spellAccuracy = (InvokerHero.GetComponent<SpellCast>().rightspellcastCounter/InvokerHero.GetComponent<SpellCast>().spellCastCounter) * 100;
+        accuracy.text = spellAccuracy.ToString();
+        
     }
 
     void Timer()

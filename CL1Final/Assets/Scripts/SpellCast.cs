@@ -8,8 +8,8 @@ public class SpellCast : MonoBehaviour
     public List<KeyCode> Spell;
     KeyCode inputKey;
     Vector3 spellCounter = new Vector3(0, 0, 0);
-    int spellCastCounter = 0;
-    int rightspellcastCounter = 0;
+    public int spellCastCounter = 0;
+    public int rightspellcastCounter = 0;
 
     public GameObject gameManagerRef;
 

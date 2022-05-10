@@ -105,9 +105,9 @@ public class SpellCast : MonoBehaviour
             }
         }
 
-        float spellCode = 100 * spellCounter.x + 10 * spellCounter.y + spellCounter.z;      //converts the counter information into a float
+        float spellCode = 100 * spellCounter.x + 10 * spellCounter.y + spellCounter.z;                  //converts the counter information into a float
         //Debug.Log(spellCode);
-        int spellParse = (int) spellCode;                                                         //converts the float into a integer for Switch statement parsing
+        int spellParse = (int) spellCode;                                                               //converts the float into a integer for Switch statement parsing
 
         spellCastCounter++;
 
@@ -123,10 +123,9 @@ public class SpellCast : MonoBehaviour
                 {
                     rightspellcastCounter++;
                     Debug.Log("Spell Count " + rightspellcastCounter);
+                    gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 }
-
-                gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
-                spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
+                spellCounter = new Vector3(0, 0, 0);                                                    //resets the spell counter to 0 after spell is cast
                 //StartCoroutine(SpellUtillity.ColdSnap());
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
                 break;
@@ -140,10 +139,9 @@ public class SpellCast : MonoBehaviour
                 {
                     rightspellcastCounter++;
                     Debug.Log("Spell Count " + rightspellcastCounter);
+                    gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 }
-                
-                gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
-                spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
+                spellCounter = new Vector3(0, 0, 0);                                                    //resets the spell counter to 0 after spell is cast
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
                 break;
             case 201:
@@ -155,9 +153,9 @@ public class SpellCast : MonoBehaviour
                 {
                     rightspellcastCounter++;
                     Debug.Log("Spell Count " + rightspellcastCounter);
+                    gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 }
-                gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
-                spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
+                spellCounter = new Vector3(0, 0, 0);                                                    //resets the spell counter to 0 after spell is cast
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
                 break;
             case 030:
@@ -169,9 +167,9 @@ public class SpellCast : MonoBehaviour
                 {
                     rightspellcastCounter++;
                     Debug.Log("Spell Count " + rightspellcastCounter);
+                    gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 }
-                gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
-                spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
+                spellCounter = new Vector3(0, 0, 0);                                                    //resets the spell counter to 0 after spell is cast
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
                 break;
             case 120:
@@ -183,9 +181,9 @@ public class SpellCast : MonoBehaviour
                 {
                     rightspellcastCounter++;
                     Debug.Log("Spell Count " + rightspellcastCounter);
+                    gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 }
-                gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
-                spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
+                spellCounter = new Vector3(0, 0, 0);                                                    //resets the spell counter to 0 after spell is cast
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
                 break;
             case 021:
@@ -197,9 +195,9 @@ public class SpellCast : MonoBehaviour
                 {
                     rightspellcastCounter++;
                     Debug.Log("Spell Count " + rightspellcastCounter);
+                    gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 }
-                gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
-                spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
+                spellCounter = new Vector3(0, 0, 0);                                                    //resets the spell counter to 0 after spell is cast
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
                 break;
             case 003:
@@ -211,9 +209,9 @@ public class SpellCast : MonoBehaviour
                 {
                     rightspellcastCounter++;
                     Debug.Log("Spell Count " + rightspellcastCounter);
+                    gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 }
-                gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
-                spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
+                spellCounter = new Vector3(0, 0, 0);                                                    //resets the spell counter to 0 after spell is cast
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
                 break;
             case 102:
@@ -225,9 +223,9 @@ public class SpellCast : MonoBehaviour
                 {
                     rightspellcastCounter++;
                     Debug.Log("Spell Count " + rightspellcastCounter);
+                    gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 }
-                gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
-                spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
+                spellCounter = new Vector3(0, 0, 0);                                                    //resets the spell counter to 0 after spell is cast
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
                 break;
             case 012:
@@ -239,9 +237,9 @@ public class SpellCast : MonoBehaviour
                 {
                     rightspellcastCounter++;
                     Debug.Log("Spell Count " + rightspellcastCounter);
+                    gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 }
-                gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
-                spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
+                spellCounter = new Vector3(0, 0, 0);                                                    //resets the spell counter to 0 after spell is cast
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
                 break;
             case 111:
@@ -253,9 +251,9 @@ public class SpellCast : MonoBehaviour
                 {
                     rightspellcastCounter++;
                     Debug.Log("Spell Count " + rightspellcastCounter);
+                    gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
                 }
-                gameManagerRef.GetComponent<GameManager>().SpellRandomiser();
-                spellCounter = new Vector3(0, 0, 0);                                        //resets the spell counter to 0 after spell is cast
+                spellCounter = new Vector3(0, 0, 0);                                                    //resets the spell counter to 0 after spell is cast
                 Debug.Log("You cast " + spellCastCounter + " spell(s)");
                 break;
             
